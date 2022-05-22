@@ -162,20 +162,46 @@
                           </ul>
                           <div class="tab-content pt-2" id="myTabjustifiedContent">
                             <div class="tab-pane fade show active" id="home-justified" role="tabpanel" aria-labelledby="home-tab">
-                              Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.
+                              <!-- List group with active and disabled items -->
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Episode 01</li>
+                                  <li class="list-group-item">Episode 02</li>
+                                </ul><!-- End Clean list group -->
                             </div>
                             <div class="tab-pane fade" id="profile-justified" role="tabpanel" aria-labelledby="profile-tab">
-                              Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos quia. Accusantium distinctio omnis et atque fugiat. Itaque doloremque aliquid sint quasi quia distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut laboriosam voluptatum dicta.
+                              <!-- List group with active and disabled items -->
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Sequence 01</li>
+                                  <li class="list-group-item">Sequence 02</li>
+                                </ul><!-- End Clean list group -->
                             </div>
                             <div class="tab-pane fade" id="contact-justified" role="tabpanel" aria-labelledby="contact-tab">
-                              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+                              <!-- List group with active and disabled items -->
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Shot 01</li>
+                                  <li class="list-group-item">Shot 02</li>
+                                </ul><!-- End Clean list group -->
                             </div>
                           </div><!-- End Default Tabs -->
 
                         </div>
                       </div>
+
+                      <!-- add shots -->
+                      <div class="">
+                      <nav>
+                        <ol class="breadcrumb float-start mt-2 me-3">
+                          <li class="breadcrumb-item active"><a href="#">EP01</a></li>
+                          <li class="breadcrumb-item active"><a href="#">SQ01</a></li>
+                          <li class="breadcrumb-item active">SH02</li>
+                        </ol>
+                      </nav>
+                      <button type="button" class="btn btn-success mb-2 ms-1 " data-bs-toggle="modal" data-bs-target="#verticalycentered" ><i class="bi bi-plus-circle"> </i> Add shot</button>
+                      </div>
                     </div>
+                    
                     <div class="modal-footer">
+                      
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                       <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
@@ -184,55 +210,7 @@
               </div><!-- End Large Modal-->
 
 
-            <!-- Vertically centered Modal -->
-              <div class="modal fade" id="addName1" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Add new shot in SQ01 </h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="card " >
-                        <div class="card-body">
-
-                          <!-- Default Tabs -->
-                          <ul class="nav nav-tabs d-flex" id="myTabjustified" role="tablist">
-                            <li class="nav-item flex-fill" role="presentation">
-                              <button class="nav-link w-100 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-justified" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-                            </li>
-                            <li class="nav-item flex-fill" role="presentation">
-                              <button class="nav-link w-100" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-justified" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-                            </li>
-                            <li class="nav-item flex-fill" role="presentation">
-                              <button class="nav-link w-100" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-justified" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-                            </li>
-                          </ul>
-                          <div class="tab-content pt-2" id="myTabjustifiedContent">
-                            <div class="tab-pane fade show active" id="home-justified" role="tabpanel" aria-labelledby="home-tab">
-                              Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.
-                            </div>
-                            <div class="tab-pane fade" id="profile-justified" role="tabpanel" aria-labelledby="profile-tab">
-                              Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos quia. Accusantium distinctio omnis et atque fugiat. Itaque doloremque aliquid sint quasi quia distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut laboriosam voluptatum dicta.
-                            </div>
-                            <div class="tab-pane fade" id="contact-justified" role="tabpanel" aria-labelledby="contact-tab">
-                              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
-                            </div>
-                          </div><!-- End Default Tabs -->
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                      <a type="button" href="./page_project.php" class="btn btn-primary">Confirm</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Vertically centered Modal-->
-            </div>
+            
 
             <!-- SQ1 -->
             <div class="col-12">
@@ -328,7 +306,7 @@
                                                     <div class="card">
                                                       <div class="card-body">
                                                         <h6 class=" card-title">
-                                                          <img src="../pipeline/assets/img/stewie.png" alt="Profile" style="width: 30px; height:auto" class="rounded-circle"> Stewie Griffin
+                                                          <img src="../pipeline/assets/img//profile-img.jpg" alt="Profile" style="width: 30px; height:auto" class="rounded-circle"> <?php echo $nama; ?>
                                                         </h6>
                                                           <h6>This is my final result for this task.</h6>
                                                       </div>
@@ -347,7 +325,7 @@
                                                       <div class="activite-label">March 22 2022</div>
                                                       <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
                                                       <div class="activity-content">
-                                                        Dea has changed this task from <a href="#" class="fw-bold text-dark">DOING</a> to <a href="#" class="fw-bold text-dark">DONE</a>
+                                                        <?php echo $nama; ?> has changed this task from <a href="#" class="fw-bold text-dark">DOING</a> to <a href="#" class="fw-bold text-dark">DONE</a>
                                                       </div>
                                                     </div><!-- End activity item-->
                                                     
@@ -355,7 +333,7 @@
                                                       <div class="activite-label">March 21 2022</div>
                                                       <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
                                                       <div class="activity-content">
-                                                        Dea has changed this task from <a href="#" class="fw-bold text-dark">TODO</a> to <a href="#" class="fw-bold text-dark">DOING</a>
+                                                        <?php echo $nama; ?> has changed this task from <a href="#" class="fw-bold text-dark">TODO</a> to <a href="#" class="fw-bold text-dark">DOING</a>
                                                       </div>
                                                     </div><!-- End activity item-->
                                                   </div>
