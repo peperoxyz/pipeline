@@ -133,9 +133,6 @@
             </div><!-- End Customers Card -->
 
             <!-- Tugas User -->
-
-            
-
             <!-- Large Modal -->
               <div class="modal fade" id="addName" tabindex="-1">
                 <div class="modal-dialog modal-lg">
@@ -233,7 +230,16 @@
                     <tbody>
                       <tr>
                         <th scope="row"><a href="#"><img src="../pipeline/assets/img/joy.png" alt=""></a><a href="#" type="button" class="text-primary fw-bold" > SH01 </a></th>
-                        <td><button href="#" type="button" class="btn btn-danger "data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" > TODO </button></td>
+
+                        <!-- php -->
+                        <?php 
+                          $modals = array( 'modal1', 'modal2', 'modal3', 'modal4', 'modal5' );// Set the array
+                          $i = 1; // Set the increment variable
+                          foreach( $modals as $modal ):  
+
+                          ?>
+
+                        <td><button href="#" type="button" class="btn btn-danger "data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" > TODO <?php echo $i;?> </button></td>
                         
                         <!-- Modal Dialog Scrollable -->
                             <div class="modal fade" id="modalDialogScrollable" tabindex="-1">
@@ -347,11 +353,11 @@
                                 </div>
                               </div>
                             </div><!-- End Modal Dialog Scrollable-->
+                            
+                            <?php   $i++; // Increment the increment variable
 
-                        <td><button type="button" class="btn btn-success">DONE</button></td>
-                        <td><button type="button" class="btn btn-danger">TODO</button></td>
-                        <td><button type="button" class="btn btn-danger">TODO</button></td>
-                        <td><button type="button" class="btn btn-danger">TODO</button></td>
+                            endforeach; //End the loop ?>
+
                       </tr>
                       <tr>
                         <th scope="row"><a href="#"><img src="../pipeline/assets/img/sadness.png" alt=""></a> <a href="#" type="button" class="text-primary fw-bold "data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" > SH02 </a></th>
