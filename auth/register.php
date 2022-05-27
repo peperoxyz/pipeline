@@ -74,18 +74,13 @@
 
                   <form action="proses_register.php" method="POST" class="row g-3 needs-validation"  novalidate>
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Your Name</label>
-                      <input type="text" name="nama" class="form-control" id="nama" required>
-                      <div class="invalid-feedback">Please, enter your name!</div>
+                      <input type="hidden" name="userID" class="form-control" id="nama" required>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Your Email</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="email" name="email" class="form-control" id="yourEmail" required>
-                        <div class="invalid-feedback">Please enter a valid Email adddress!</div>
-                      </div>
+                      <label for="yourName" class="form-label">Your Name</label>
+                      <input type="text" name="name" class="form-control" id="nama" required>
+                      <div class="invalid-feedback">Please, enter your name!</div>
                     </div>
 
                     <div class="col-12">
@@ -95,8 +90,17 @@
                     </div>
 
                     <div class="col-12">
+                      <label for="yourEmail" class="form-label">Your Email</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" name="email" class="form-control" id="yourEmail" required>
+                        <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
                       <label for="nohp" class="form-label">No. Hp</label>
-                      <input type="number" name="nohp" class="form-control" id="nohp" required>
+                      <input type="number" name="phone" class="form-control" id="nohp" required>
                       <div class="invalid-feedback">Please, enter your number handphone!</div>
                     </div>
 
@@ -105,15 +109,7 @@
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
-
-                   <!---- <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
-                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
-                        <div class="invalid-feedback">You must agree before submitting.</div>
-                      </div>
-                    </div> 
-                  -->
+                    
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit">Create Account</button>
                     </div>
@@ -126,10 +122,6 @@
               </div>
 
               <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
                 Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
               </div>
 

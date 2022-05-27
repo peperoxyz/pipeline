@@ -5,11 +5,14 @@
     
   <?php 
     include '../pipeline/auth/koneksi.php';
+    $query = mysqli_query($koneksi, "SELECT user.userID, user.username, role.roleID, role.level FROM 
+             user, role WHERE user.userID = role.roleID");
+    $data  = mysqli_fetch_array($query);
 
     if(isset($_SESSION['role']))
     {
         #jika rolenya Developer, Manager Project, Supervisor, Artist, Guest
-        if($_SESSION['role'] == "Developer")
+        if($_SESSION['role'] == "1")
         {
             ?>
             <li class="nav-heading">Global</li>
@@ -21,7 +24,7 @@
             </li>
             <!-- End Dashboard Nav -->
             <?php
-        }else if($_SESSION['role'] == "Manager Project")
+        }else if($_SESSION['role'] == "4")
         {
             ?>
             <li class="nav-heading">Global</li>
@@ -33,7 +36,7 @@
             </li>
             <!-- End Dashboard Nav -->
             <?php
-        }else if($_SESSION['role'] == "Artist")
+        }else if($_SESSION['role'] == "3")
         {
             ?>
             <li class="nav-heading">Global</li>
@@ -45,7 +48,7 @@
            </li>
            <!-- End Dashboard Nav -->
            <?php
-        }else if($_SESSION['role'] == "Supervisor")
+        }else if($_SESSION['role'] == "2")
         {
             ?>
             <li class="nav-heading">Global</li>
@@ -65,7 +68,7 @@
     if(isset($_SESSION['role']))
     {
         #jika rolenya Developer, Manager Project, Supervisor, Artist, Guest
-        if($_SESSION['role'] == "Developer")
+        if($_SESSION['role'] == "1")
         {
             ?>
       <li class="nav-item">
@@ -76,7 +79,7 @@
             </li>
             <!-- End Studio Nav -->
             <?php
-        }else if($_SESSION['role'] == "Guest")
+        }else if($_SESSION['role'] == "5")
         {
             
             ?>
@@ -88,7 +91,7 @@
             </li>
             <!-- End Studio Nav -->
             <?php
-        }else if($_SESSION['role'] == "Manager Project")
+        }else if($_SESSION['role'] == "4")
         {
             ?>
             <li class="nav-item">
@@ -99,7 +102,7 @@
             </li>
             <!-- End Studio Nav -->
             <?php
-        }else if($_SESSION['role'] == "Artist")
+        }else if($_SESSION['role'] == "3")
         {
             ?>
             <li class="nav-item">
@@ -110,7 +113,7 @@
            </li>
            <!-- End Studio Nav -->
            <?php
-        }else if($_SESSION['role'] == "Supervisor")
+        }else if($_SESSION['role'] == "2")
         {
             ?>
             <li class="nav-item">
@@ -128,7 +131,7 @@
     if(isset($_SESSION['role']))
     {
         #jika rolenya Developer, Manager Project, Supervisor, Artist, Guest
-        if($_SESSION['role'] == "Developer")
+        if($_SESSION['role'] == "1")
         {
             ?>
               <a class="nav-link collapsed" href="page_people.php">
@@ -137,7 +140,7 @@
               </a>
               </li><!-- End Project Page Nav -->
             <?php
-        }else if($_SESSION['role'] == "Manager Project")
+        }else if($_SESSION['role'] == "4")
         {
             ?>
               <a class="nav-link collapsed" href="page_people.php">
@@ -146,7 +149,7 @@
               </a>
               </li><!-- End Project Page Nav -->
            <?php
-        }else if($_SESSION['role'] == "Supervisor")
+        }else if($_SESSION['role'] == "2")
         {
             ?>
               <a class="nav-link collapsed" href="page_people.php">
@@ -155,7 +158,7 @@
               </a>
               </li><!-- End Project Page Nav -->
            <?php
-        }else if($_SESSION['role'] == "Guest")
+        }else if($_SESSION['role'] == "5")
         {
             ?>
               <a class="nav-link collapsed" href="page_people.php">
@@ -172,7 +175,7 @@
     if(isset($_SESSION['role']))
     {
         #jika rolenya Developer, Manager Project, Supervisor, Artist, Guest
-        if($_SESSION['role'] == "Developer")
+        if($_SESSION['role'] == "1")
         {
             ?>
             <li class="nav-item">
@@ -182,7 +185,7 @@
             </a>
             </li><!-- End Profile Page Nav -->
             <?php
-        }else if($_SESSION['role'] == "Guest")
+        }else if($_SESSION['role'] == "5")
         {
             
             ?>
@@ -193,7 +196,7 @@
             </a>
             </li><!-- End Profile Page Nav -->
             <?php
-        }else if($_SESSION['role'] == "Manager Project")
+        }else if($_SESSION['role'] == "4")
         {
             ?>
             <li class="nav-item">
@@ -203,7 +206,7 @@
             </a>
             </li><!-- End Profile Page Nav -->
             <?php
-        }else if($_SESSION['role'] == "Artist")
+        }else if($_SESSION['role'] == "3")
         {
             ?>
             <li class="nav-item">
@@ -213,7 +216,7 @@
             </a>
             </li><!-- End Profile Page Nav -->
            <?php
-        }else if($_SESSION['role'] == "Supervisor")
+        }else if($_SESSION['role'] == "2")
         {
             ?>
             <li class="nav-item">

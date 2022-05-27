@@ -2,37 +2,33 @@
 	session_start();
 	include 'koneksi.php';
 
-	$nama = $_POST['nama'];
-	$email = $_POST['email'];
-	$nohp = $_POST['nohp'];
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$role = $_POST['role'];
-	$user_id = $_POST['user_id'];
+	$userID 	= $_POST['userID'];
+	$username 	= $_POST['username'];	
+	$nama 		= $_POST['name'];
+	$email 		= $_POST['email'];
+	$password 	= $_POST['password'];	
+	$nohp 		= $_POST['phone'];
+
+	$pass_acak 	= password_hash($password, PASSWORD_DEFAULT);
+	$input 		= mysqli_query($koneksi, "INSERT INTO user (userID, name, username, email, phone, password) 
+				  VALUES( '', '$nama', '$username', '$email', '$nohp','$pass_acak')") or die(mysqli_error($koneksi));
 
 
-	$pass_acak = password_hash($password, PASSWORD_DEFAULT);
-	$input = mysqli_query($koneksi, "INSERT INTO tb_user (user_id, nama, email, nohp, username, password ) VALUES( '','$nama', '$email','$nohp','$username','$pass_acak')") or die(mysqli_error($koneksi));
-
-
-	if ($input) 
-	{ ?>
+	if ($input) { 
+		?>
 			<script language="JavaScript">
-            alert('Selamat Data Berhasil Di tambahkan, Sekarang Silahkan Login Terlebih Dahulu');
+            alert('The data has been successfully added, now please login first');
             document.location='login.php';
         	</script>
 		<?php
-		// echo "Data berhasil disimpan";
-		// header("location: ../transaksi.html");
-		// header("location: logindaydream.php");
 		
-	} else
-		{
+	} else {
 		?>
 			<script language="JavaScript">
-            alert('Maaf Data Yang Anda Masukkan Kurang Lengkap, Silahkan Lengkapi Terlebih Dahulu');
+            alert('The data is not complete . Please complete the data!');
             document.location='register.php';
         	</script>
-	<?php
+	    <?php
 		}
-?>
+		?>
+
