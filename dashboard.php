@@ -203,7 +203,7 @@
                         
                         <!-- Modal Dialog Scrollable -->
                             <div class="modal fade" id="modalDialogScrollable" tabindex="-1">
-                              <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                              <div class="modal-dialog #modalDialogScrollable modal-lg">
                                 <div class="modal-content">
                                   <div class="modal-header">
                                     <h5 class="modal-title">Task Details |<span> Animation </span></h5>
