@@ -23,114 +23,71 @@
         <div class="col">
           <div class="row">
 
-            <!-- Sales Card == shot card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-
-                <div class="card-body">
-                  <h5 class="card-title">Project <span>| Choosen</span></h5>
-                  <div class="filter">
-                    <a class="icon" href="#" data-bs-toggle="dropdown">Change <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                        <h6>Your Projects</h6>
-                      </li>
-  
-                      <li><a class="dropdown-item" href="#">Inside Out</a></li>
-                      <li><a class="dropdown-item" href="#">Family Guy</a></li>
-                      <li><a class="dropdown-item" href="#">American Dad</a></li>
-                      <li><a class="dropdown-item" href="#">The Simpsons</a></li>
-                    </ul>
-                  </div>
-
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-camera-reels"></i>
+                        <!-- Project Card -->
+            <div class="col-lg-2 col-md-4">
+              <div class="card info-card sales-card" style="padding-bottom: 0px">
+                <div class="card-body" style="padding: 0 20px 0px 20px;">
+                    <div class="card-title">Inside Out <a href="#" data-bs-toggle="dropdown"> <i class="bi bi-chevron-down"></i></a>
+                        <!-- <a class="icon" href="#" data-bs-toggle="dropdown">Change <i class="bi bi-chevron-down"></i></a> -->
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <li><a class="dropdown-item" href="#">Inside Out</a></li>
+                        <li><a class="dropdown-item" href="#">Family Guy</a></li>
+                        <li><a class="dropdown-item" href="#">American Dad</a></li>
+                        <li><a class="dropdown-item" href="#">The Simpsons</a></li>
+                        </ul>
                     </div>
-                    <div class="ps-3">
-                      <h6>Inside Out</h6>
-                      <a href="./page_team.php"> <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Team Members'</span> </a>
-
-                    </div>
-                  </div>
                 </div>
+              </div>
+            </div>
 
+            <!-- divider Card -->
+            <div class="col-1">
+              <div class="card-title info-card  "style="padding-bottom: 0px">
+                <div class="card-body" style="padding: 0 20px 0px 20px;">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
               </div>
             </div>
 
             <!-- Task Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card revenue-card">
-
-
-                <div class="card-body">
-                  <h5 class="card-title">Tasks <span>| Choosen</span></h5>
-
-                  <div class="filter">
-                    <a class="icon" href="#" data-bs-toggle="dropdown">Change <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                        <h6>Your Tasks</h6>
-                      </li>
-  
-                      <li><a class="dropdown-item" href="./dashboard_asset.php">Asset</a></li>
-                      <li><a class="dropdown-item" href="./dashboard.php">Shot</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-puzzle"></i>
+            <div class="col-lg-2 col-md-4">
+              <div class="card info-card sales-card "style="padding-bottom: 0px">
+                <div class="card-body" style="padding: 0 20px 0px 20px;">
+                    <div class="card-title">Shot <a href="#" data-bs-toggle="dropdown"> <i class="bi bi-chevron-down"></i></a>
+                        <!-- <a class="icon" href="#" data-bs-toggle="dropdown">Change <i class="bi bi-chevron-down"></i></a> -->
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <li><a class="dropdown-item" href="page_shot.php">Shot</a></li>
+                        <li><a class="dropdown-item" href="page_asset.php">Asset</a></li>
+                        <li><a class="dropdown-item" href="page_team.php">Team</a></li>
+                        </ul>
                     </div>
-                    <div class="ps-3">
-                      <h6>Shot</h6>
-                      <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Shots </span>
-
-                    </div>
-                  </div>
                 </div>
-
+              </div>
+            </div>
+        
+            <!-- divider Card -->
+            <div class="col-1">
+              <div class="card-title info-card  "style="padding-bottom: 0px">
+                <div class="card-body" style="padding: 0 20px 0px 20px;">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
               </div>
             </div>
 
             <!-- Task Detail Card -->
-            <div class="col-xxl-4 col-xl-12">
-
-              <div class="card info-card customers-card">
-              
-              <a href="#"> 
-                <div class="card-body">
-                  <h5 class="card-title">Task Detail <span>| Choosen</span></h5>
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+              <div class="card info-card sales-card" style="padding-bottom: 0px">
+                <div class="card-body" style="padding: 0 20px 0px 20px;">
+                    <div class="card-title">Episodes <a href="#" data-bs-toggle="dropdown"> <i class="bi bi-chevron-down"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <li><a class="dropdown-item" href="#">Episode 1</a></li>
+                        <li><a class="dropdown-item" href="#">Episode 2</a></li>
+                        <li><a class="dropdown-item" href="#">Episode 3</a></li>
+                        </ul>
                     </div>
-                    <div class="ps-3">
-                      <h6>E01</h6>
-                      <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Episodes</span>
-                    </div>
-                  </div>
-
-                  <div class="filter">
-                    <a class="icon" href="#" data-bs-toggle="dropdown">Change <i class="bi bi-chevron-down"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                        <h6>Episodes</h6>
-                      </li>
-  
-                      <li><a class="dropdown-item" href="#">EP01</a></li>
-                      <li><a class="dropdown-item" href="#">EP02</a></li>
-                      <li><a class="dropdown-item" href="#">EP03</a></li>
-                      <li><a class="dropdown-item" href="#">EP04</a></li>
-                    </ul>
-                  </div>
-
                 </div>
-              </a>
               </div>
-
-            </div><!-- End Customers Card -->
+            </div> 
 
             <!-- Tugas User -->
             <!-- Large Modal -->
@@ -213,11 +170,14 @@
             <div class="col-12">
               <div class="card top-selling overflow-auto">
                 <div class="card-body pb-0"> 
-                  <h5 class="card-title">SQ01</h5> 
+                  <h5 class="card-title">SQ01
+                                  <button type="button" class="btn btn-primary mb-3 float-end" data-bs-toggle="modal" data-bs-target="#addName" ><i class="bi bi-plus-circle"> </i>Add New Shot</button>
+                  </h5> 
+                  
                   <table class="table table-borderless">
                     <thead>
                       <tr>
-                        <th scope="col" class="status">Name <a class="mb-2" data-bs-toggle="modal" data-bs-target="#addName" ><i class="bi bi-plus-circle"></a> </th> 
+                        <th scope="col" class="status">Name</th> 
                         <th scope="col" class="status">Animation</th>
                         <th scope="col" class="status">Layout</th>
                         <th scope="col" class="status">Render</th>

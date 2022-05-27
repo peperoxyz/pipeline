@@ -26,7 +26,7 @@
               <!-- <p><code>Add member to the team</code></p> -->
 
               <!-- Table with stripped rows -->
-              <table class="table datatable">
+              <table class="table ">
                 <thead>
                   <tr>
                     <th scope="col">No.</th>
@@ -34,35 +34,34 @@
                     <th scope="col">Email</th>
                     <th scope="col">No. Hp</th>
                     <th scope="col">Username</th>
-                    <th scope="col">Role</th>
+                    <!-- <th scope="col">Role</th> -->
                     <th scope="col">Action</th>
-              <!-- <th scope="col">Start Date</th> -->
                   </tr>
                 </thead>
                 <tbody>
                 
-                  <!-- <?php 
+                  <?php 
                     include '../pipeline/auth/koneksi.php';
                     $no=1;
-                    $query       = "SELECT * FROM tb_user";
+                    $query       = "SELECT * FROM user";
                     $data_profile = mysqli_query($koneksi, $query) or die(mysqli_error($koneksi));
                       while($data  = mysqli_fetch_array($data_profile))
                     {
                       ?>
                   <tr>
                     <td><?=$no++?></td>
-                    <td><?php echo $data['nama'];?></td>
+                    <td><?php echo $data['name'];?></td>
                     <td><?php echo $data['email'];?></td>
-                    <td><?php echo $data['nohp'];?></td>
+                    <td><?php echo $data['phone'];?></td>
                     <td><?php echo $data['username'];?></td>
-                    <td><?php echo $data['role'];?></td>
+                    <!-- <td><?php echo $data['role'];?></td> -->
                     <td>
-                    <a class="btn btn-primary"  href="editmember.php?=<?php echo $data['nama'];?>">Action</a>
+                    <a class="btn btn-primary"  href="editmember.php?=<?php echo $data['name'];?>">Action</a>
                     </td>
                   </tr>
                   <?php
                     }
-                  ?> -->
+                  ?> 
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
