@@ -140,7 +140,9 @@
             <div class="col-12">
               <div class="card top-selling overflow-auto">
                 <div class="card-body pb-0"> 
-                  <h5 class="card-title">Characters</h5> 
+                  <h5 class="card-title">Characters 
+                  <button type="button" class="btn btn-primary mb-3 float-end" data-bs-toggle="modal" data-bs-target="#addName" ><i class="bi bi-plus-circle"> </i>Add New Asset</button>
+                  </h5>
                   <table class="table table-borderless">
                     <thead>
                       <tr>
