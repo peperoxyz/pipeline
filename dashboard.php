@@ -75,7 +75,7 @@
             </div>
 
             <!-- Task Detail Card -->
-            <div class="col-lg-2 col-md-4 col-sm-4">
+            <div class="col-lg-2 col-md-4">
               <div class="card info-card sales-card" style="padding-bottom: 0px">
                 <div class="card-body" style="padding: 0 20px 0px 20px;">
                     <div class="card-title">Episodes <a href="#" data-bs-toggle="dropdown"> <i class="bi bi-chevron-down"></i></a>
