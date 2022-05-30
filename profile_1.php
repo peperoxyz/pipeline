@@ -2,7 +2,7 @@
 <?php include '../pipeline/templates/header.php'; ?>
 
 <?php 
-// session_start();
+//session_start();
 $userID      = $_SESSION['userID'];
 $username    = $_SESSION['username'];
 $nama        = $_SESSION['name'];
@@ -49,8 +49,8 @@ $password    = $_SESSION['password'];
               $data_profile = mysqli_query($koneksi, $query) or die(mysqli_error($koneksi));
               while($data   = mysqli_fetch_array($data_profile)){
             ?>               
-              <img src="../pipeline/assets/img//profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2><?php echo $data['name']; ?></h2>
+            <?php echo  "<img src='image/".$data['foto']."' width='500'>";?> 
+              <h2 align="center"><?php echo $data['name']; ?></h2>
               <!-- <h3><?php echo $data['role']; ?></h3> -->
               <div class="social-links mt-2">
                 <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
@@ -86,16 +86,16 @@ $password    = $_SESSION['password'];
                   <h5 class="card-title">Profile Details</h5>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                    <div class="col-lg-3 col-md-4 label">Full Name</div>
                     <div class="col-lg-9 col-md-8"><?php echo $data['name']; ?></div>
                   </div>
 
-                  <!--
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Company</div>
-                    <div class="col-lg-9 col-md-8">Louis' Home Corp</div>
+                    <div class="col-lg-3 col-md-4 label">Username</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $data['username']; ?></div>
                   </div>
 
+                 <!--
                  <div class="row">
                     <div class="col-lg-3 col-md-4 label">Role</div>
                     <div class="col-lg-9 col-md-8"><?php echo $data['role']; ?></div>
@@ -120,26 +120,40 @@ $password    = $_SESSION['password'];
 
                     <div class="row mb-3">                                
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
-                      <form method="POST" action="upload.php">
-                        <?php
-                           include "../pipeline/auth/koneksi.php";
-                           $no = 1;
-                           $userID        = $_SESSION['userID'];
-                           $query1        = "SELECT * FROM user where userID = {$_SESSION['userID']}";
-                           $data_upload   = mysqli_query($koneksi, $query1) or die(mysqli_error($koneksi));
-                           while($data    = mysqli_fetch_array($data_upload)){
-                        ?>                                                
-                        <div class="col-md-8 col-lg-9">
-                          <img src="../pipeline/assets/img/profile-img.jpg" alt="Profile">
+                      <div class="col-md-8 col-lg-9">
+                      <form action="upload_photo.php" method="POST" enctype='multipart/form-data'>
+                    <?php
+                       include "../pipeline/auth/koneksi.php";
+                       $no = 1;
+                       $userID        = $_SESSION['userID'];
+                       $query         = "SELECT * FROM user where userID = {$_SESSION['userID']}";
+                       $data_profile  = mysqli_query($koneksi, $query) or die(mysqli_error($koneksi));
+                       while($data_upload    = mysqli_fetch_array($data_profile)){
+                    ?>                                                             
+                        
+                          <?php echo  "<img src='image/".$data_upload['foto']."' width='500'>";?> 
                           <div class="pt-2">
-                            <input type="file" name="photo" class="btn btn-primary btn-sm" title="Upload new profile image">
-                            <input type="submit" name="photo" class="btn btn-primary btn-sm" value="Upload">
+                            <tr>
+                              <div class="row">
+                              <div class="col-6">
+                              <td><input class="form-control" type="File" name="foto" id="foto" class="btn btn-outline-primary"></td>
+                              </div>
+                              <div class="col-4 " style="margin-left:-15px">
+                              <td><input type="submit" name="foto" value="Upload" class="btn btn-outline-primary"></td>
+                              </div>
+                              </div>
+                                <input class="form-control" name="userID" type="hidden" value="<?php echo $data_upload['userID']; ?>"  required />
+                                <input name="name" type="hidden" class="form-control" id="fullName" value="<?php echo $data_upload['name']; ?>">
+                                <input name="username" type="hidden" class="form-control" id="username" value="<?php echo $data_upload['username']; ?>">
+                                <input name="phone" type="hidden" class="form-control" id="Phone" value="<?php echo $data_upload['phone']; ?>">
+                                <input name="email" type="hidden" class="form-control" id="Email" value="<?php echo $data_upload['email']; ?>">
+                            </tr>
                           </div>
                         </div>
                       </form>
-                      <?php
-                        }
-                      ?>
+                    <?php
+                      }
+                    ?>  
                         </div>  
 
                   <!-- Profile Edit Form -->
@@ -147,7 +161,7 @@ $password    = $_SESSION['password'];
                     <?php
                        include "../pipeline/auth/koneksi.php";
                        $no = 1;
-                       $userID       = $_SESSION['userID'];
+                       $userID        = $_SESSION['userID'];
                        $query         = "SELECT * FROM user where userID = {$_SESSION['userID']}";
                        $data_profile  = mysqli_query($koneksi, $query) or die(mysqli_error($koneksi));
                        while($data    = mysqli_fetch_array($data_profile)){

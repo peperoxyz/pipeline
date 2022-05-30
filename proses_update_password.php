@@ -16,8 +16,7 @@ require_once '../pipeline/auth/koneksi.php';
       $valid  = $query->num_rows;
  
           if($valid > 0){
-              $koneksi->query("UPDATE user SET password = '$pass_acak' WHERE userID = '$userID'") 
-                    or die($koneksi->error());
+              $koneksi->query("UPDATE user SET password = '$pass_acak' WHERE userID = '$userID'") or die($koneksi->error());
               echo "<script>alert('Password updated')</script>";
               echo "<script>window.location = 'profile_1.php'</script>";
           }else{

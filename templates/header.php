@@ -1,3 +1,19 @@
+<?php 
+session_start();
+$userID      = $_SESSION['userID'];
+$username    = $_SESSION['username'];
+$nama        = $_SESSION['name'];
+?>
+<?php 
+
+    @session_start();
+    $username=$_SESSION['username'];
+
+    // include "koneksi.php";
+    include '../pipeline/auth/koneksi.php'; 
+
+    if (@$_SESSION['username']) {     
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,12 +48,6 @@
 </head>
 
 <body class>
-<?php 
-  include '../pipeline/auth/koneksi.php';
-  session_start();
-  $nama = $_SESSION['name'];
-?>
-
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
 
@@ -209,8 +219,16 @@
     <!-- Dropdown Icon profile -->
     <li class="nav-item dropdown pe-3">
       <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-        <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $nama; ?></span>
+        <!-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+                    <?php
+                       include "../pipeline/auth/koneksi.php";
+                       $no = 1;
+                       $userID        = $_SESSION['userID'];
+                       $query         = "SELECT * FROM user where userID = {$_SESSION['userID']}";
+                       $data_profile  = mysqli_query($koneksi, $query) or die(mysqli_error($koneksi));
+                       while($data    = mysqli_fetch_array($data_profile)){
+                    ?>        
+        <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $data['name']; ?></span>
       </a><!-- End Profile  Icon -->
 
       <!-- Dropdown Notification Icon profile -->
@@ -245,8 +263,17 @@
       </ul><!-- End Profile Dropdown Items -->
 
     </li><!-- End Profile Nav -->
+    <?php
+  }
+  ?>
 
   </ul>
 </nav><!-- End Icons Navigation -->
 
 </header><!-- End Header -->
+<?php 
+}else{
+        header("location:../dashboard.html");
+        
+}
+?>
