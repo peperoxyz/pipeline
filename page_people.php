@@ -21,8 +21,8 @@
         <div class="col-lg-12">
 
           <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Inside Out Project's Team Member</h5>
+            <div class="card-body mt-3">
+              <!-- <h5 class="card-title">Inside Out Project's Team Member</h5> -->
               <!-- <p><code>Add member to the team</code></p> -->
 
               <!-- Table with stripped rows -->

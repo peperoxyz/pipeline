@@ -23,7 +23,7 @@
         <div class="col">
           <div class="row">
 
-                        <!-- Project Card -->
+            <!-- Project Card -->
             <div class="col-lg-2 col-md-4">
               <div class="card info-card sales-card" style="padding-bottom: 0px">
                 <div class="card-body" style="padding: 0 20px 0px 20px;">
@@ -41,7 +41,7 @@
             </div>
 
             <!-- divider Card -->
-            <div class="col-1">
+            <div class="col-1 text-center">
               <div class="card-title info-card  "style="padding-bottom: 0px">
                 <div class="card-body" style="padding: 0 20px 0px 20px;">
                     <i class="bi bi-chevron-right"></i>
@@ -66,7 +66,7 @@
             </div>
         
             <!-- divider Card -->
-            <div class="col-1">
+            <div class="col-1 text-center">
               <div class="card-title info-card  "style="padding-bottom: 0px">
                 <div class="card-body" style="padding: 0 20px 0px 20px;">
                     <i class="bi bi-chevron-right"></i>
