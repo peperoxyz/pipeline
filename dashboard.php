@@ -207,12 +207,13 @@
                                 <div class="modal-content">
                                   <div class="modal-header">
                                     <h5 class="modal-title">Task Details |<span> Animation </span></h5>
+                        
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                   </div>
                                     <!-- Recent Activity -->
                                       <div class="card">
                                         <div class="card-body">
-                                          <h5 class="card-title"> EP01 <span>/ SQ01 / SH01</span> </h5>
+                                          <h5 class="card-title"> EP01 <span>/ SQ01 / SH01</span> | <img src="../pipeline/assets/img//profile-img.jpg" alt="Profile" style="width: 30px; height:auto" class="rounded-circle  "> <?php echo $nama; ?> </h5>
                                               <section class="section">
                                                 <div class="row">
                                                   <div class="col-lg-6">
@@ -228,9 +229,9 @@
                                                       
                                                       <div class="card-body">
                                                         <div class="">
-                                                          
                                                           <button type="button" class="btn btn-secondary float-end ms-2">Post a comment</button>
                                                         <div class="float-end mt-2">
+                                                            
                                                           <span class="badge rounded-pill bg-success pt-2 pb-2 pe-4 ps-4">DONE</span>
                                                           <a class="icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-chevron-down"></i></a>
                                                           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -282,7 +283,7 @@
                                                   </div>
                                                 </div>
                                               </section>
-
+                                          <div class="col-lg-6">
                                             <div class="card">
                                               <div class="card-body">
                                                 <h5 class="card-title">Log Status</h5>
@@ -305,6 +306,7 @@
                                                   </div>
                                                 </div>
                                               </div>
+                                          </div>
                                             </div><!-- End Recent Activity -->
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
